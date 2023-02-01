@@ -2,7 +2,7 @@ const Winston = require('winston');
 const DailyRotateFile = require('winston-daily-rotate-file');
 
 var transport = new DailyRotateFile({
-    filename: 'mist2021-%DATE%.log',
+    filename: 'mist2023-%DATE%.log',
     datePattern: 'YYYY-MM-DD-HH',
     zippedArchive: true,
     maxSize: '20m',
