@@ -14,6 +14,14 @@ const sidebarClose = () => {
 	}, 300);
 };
 
+const ClearCookies = () => {
+	const handleClearCookies = () => {
+	  Object.keys(Cookies.get()).forEach((cookie) => {
+		Cookies.remove(cookie);
+	  });
+	};
+  
+
 tableRow.forEach(tableRow => {
 	tableRow.addEventListener("click", function() {
 		overlay.style.opacity = 0;

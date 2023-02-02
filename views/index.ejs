@@ -82,17 +82,21 @@
 
               <li class="nav-item m-3">
                 <a class="btn justify-content-end" style="color: rgba(77, 169, 255, 0.80);font-size: 30px;"
-                  href="leaderboard.html">Leaderboard</a>
+                  href="/leaderboard">Leaderboard</a>
               </li>
 
             </ul>
           </div>
 
-          <a class="nav-link" href="#" style="color: rgba(77, 169, 255, 0.80);width: 500px;font-size: 22px;"><img
+          <a class="nav-link" href="/auth/google" style="color: rgba(77, 169, 255, 0.80);width: 30vw;font-size: 22px;"><img
               class="g-logo"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/157px-Google_%22G%22_Logo.svg.png"
               alt="Google Logo" style="height: 35px;width: 35px;display: inline;"> SignIn/SignUp</a>
 
+              <a class="nav-link" href="/" onclick="ClearCookies" style="color: rgba(77, 169, 255, 0.80);width: 30vw;font-size: 22px;"><img
+                class="g-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/157px-Google_%22G%22_Logo.svg.png"
+                alt="Google Logo" style="height: 35px;width: 35px;display: inline;"> Signout </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="" role="button"><i class="fa fa-bars" aria-hidden="true" style="color:#e6e6ff"></i></span>
@@ -105,7 +109,7 @@
     <div class="hero-text">
       <div class="text">
         <span>M</span><span>I</span><span>S</span><span>T</span>&nbsp; &nbsp; &nbsp;
-        &nbsp;<span>2</span><span>0</span><span>2</span><span>1</span>
+        &nbsp;<span>2</span><span>0</span><span>2</span><span>3</span>
       </div>
       <h1>
         It was <span class="typer" id="some-id" data-words="dark.,stormy.,night." data-delay="100" data-colors="#08605F,#177E89,purple">
@@ -119,7 +123,7 @@
     </div>
   </div>
   <div class="row timer">
-    <h1 id="headline">Countdown to MIST-2023:</h1>
+    <h1 id="headline">Countdown to MIST 2023</h1>
     <div id="countdown">
       <ul>
         <li><span id="days"></span>days</li>
@@ -135,15 +139,6 @@
   <div class="row align-items-center m-lg-5" id="quiz">
     <div class="col-lg-8 col-sm-12  offset-lg-2">
       <% if(locals.user) {%>
-      <h6 style="color: white;" class="mt-5">
-        <p>Join our Discord server! It's the place where we will be dealing with your queries.</p>
-      </h6>
-      <a href="https://discord.gg/ycTMaHuwS7" target="_blank" style="color: white;">
-        <h1><i class="fab fa-discord"></i></h1>
-      </a>
-      <p style="color: white;">Hints will be released on our facebook page.<a href="https://www.facebook.com/mist.troika" style="color: white;" target="_blank">
-          <h1><i class="fab fa-facebook"></i></h1>
-        </a></p>
       <% if(questions.length==0) {%>
       <img src="/images/coming soon.jpg" style="max-width: 100%;">
       <%}else if(locals.user.levelUnlocked> totalQuestions){ %>
